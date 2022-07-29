@@ -1,0 +1,118 @@
+.hero__inner {
+	display: flex;
+	max-width: 100%;
+	padding: 64px 0;
+}
+
+.hero__left {
+	width: 25%;
+}
+
+.hero__heading--left {
+	@include poppins(600, 18px, 27px);
+	color: $black;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.hero__list {
+	margin-bottom: 48px;
+}
+
+.hero__item {
+	& + & {
+		margin-top: 12px;
+	}
+}
+
+.hero__link {
+	@include opensans(400, 14px, 19px);
+	color: $green;
+	text-decoration: underline !important;
+}
+
+.hero__btn--left {
+	display: flex;
+	align-items: center;
+	font-family: 'Poppins';
+	@include poppins(700, 15px, 22px);
+	padding: 0;
+	padding: 12.5px 16px;
+	color: $black;
+	background-color: $btn-grey;
+	border-radius: 12px;
+	border: none;
+	&::after {
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-left: 6px;
+		background-image: url(./../../images/chevron-down.svg);
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center;
+		transform: rotate(270deg);
+	}
+}
+
+.hero__right {
+	width: 75%;
+	display: flex;
+}
+
+.hero-card {
+	width: 420px;
+	border-radius: 12px;
+	overflow: hidden;
+
+	padding: 48px 33px 32px;
+	background-image: url(./../../images/hero-bg.png),
+		url(./../../images/hero-bg-back.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+
+	& + & {
+		margin-left: 32px;
+	}
+}
+
+.hero__desc {
+	@include poppins(600, 12px, 18px);
+	color: $green;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.hero__title {
+	@include poppins(600, 22px, 33px);
+	color: $black;
+	margin: 0;
+	margin-bottom: 94px;
+}
+
+.hero-card__btn {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	padding: 12px 16px;
+	@include poppins(700, 15px, 22px);
+	color: $black;
+	border: 2px solid #92c064;
+	border-radius: 12px;
+	background-color: transparent;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-left: 6px;
+		background-image: url(./../images/chevron-down.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto;
+		transform: rotate(270deg);
+	}
+}
